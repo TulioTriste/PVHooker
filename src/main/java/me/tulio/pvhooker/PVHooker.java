@@ -16,4 +16,8 @@ public final class PVHooker extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
     }
+
+    public PVHooker get() {
+        return getPlugin(PVHooker.class);
+    }
 }
