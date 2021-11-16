@@ -5,6 +5,8 @@ import me.tulio.pvhooker.PVHooker;
 import me.tulio.pvhooker.redis.util.RedisMessage;
 import redis.clients.jedis.JedisPubSub;
 
+import java.util.UUID;
+
 public class RedisListener extends JedisPubSub {
 
     private final PVHooker plugin = PVHooker.get();
@@ -16,6 +18,17 @@ public class RedisListener extends JedisPubSub {
         A switch is made to assign the action for each type of Payload, it can also be done by "if"
          */
         switch (redisMessage.getPayload()) {
+            case PANDAHUB: {
+                String name = redisMessage.getParam("NAME");
+                int lives = Integer.parseInt(redisMessage.getParam("LIVES"));
+                boolean deathban = Boolean.parseBoolean(redisMessage.getParam("DEATHBAN"));
+            }
+            break;
+            case VAPOR: {
+                UUID uuid = UUID.fromString(redisMessage.getParam("UUID"));
+
+            }
+            break;
             default: {
                 plugin.getLogger().info("[Redis] The message was received, but there was no response");
             }
