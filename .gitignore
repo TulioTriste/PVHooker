@@ -1,0 +1,9 @@
+*.iml
+
+target/*
+
+.idea/*
+
+*.xml
+
+.gitattributes
