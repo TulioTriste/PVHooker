@@ -1,8 +1,10 @@
 package me.tulio.pvhooker;
 
 import dev.panda.file.FileConfig;
+import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
+@Getter
 public final class PVHooker extends JavaPlugin {
 
     private FileConfig config;

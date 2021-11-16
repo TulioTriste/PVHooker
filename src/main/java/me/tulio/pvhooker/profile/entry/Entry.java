@@ -1,4 +1,4 @@
-package me.tulio.pvhooker.entry;
+package me.tulio.pvhooker.profile.entry;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
