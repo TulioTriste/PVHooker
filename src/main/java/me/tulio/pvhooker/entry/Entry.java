@@ -11,5 +11,6 @@ public class Entry {
 
     private final UUID identifier;
     private final String name;
-    private final String url;
+    private final int lives;
+    private final boolean deathban;
 }
