@@ -1,0 +1,5 @@
+name: PVHooker
+version: '${project.version}'
+main: me.tulio.pvhooker.PVHooker
+load: STARTUP
+authors: [ TulioTriste ]
