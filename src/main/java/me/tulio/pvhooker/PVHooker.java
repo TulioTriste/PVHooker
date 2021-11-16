@@ -17,7 +17,7 @@ public final class PVHooker extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    public PVHooker get() {
+    public static PVHooker get() {
         return getPlugin(PVHooker.class);
     }
 }
