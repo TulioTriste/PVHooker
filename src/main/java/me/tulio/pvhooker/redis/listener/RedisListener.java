@@ -2,6 +2,9 @@ package me.tulio.pvhooker.redis.listener;
 
 import com.google.gson.Gson;
 import me.tulio.pvhooker.PVHooker;
+import me.tulio.pvhooker.modes.Vapor;
+import me.tulio.pvhooker.profile.Profile;
+import me.tulio.pvhooker.profile.entry.Entry;
 import me.tulio.pvhooker.redis.util.RedisMessage;
 import redis.clients.jedis.JedisPubSub;
 
@@ -22,11 +25,13 @@ public class RedisListener extends JedisPubSub {
                 UUID uuid = UUID.fromString(redisMessage.getParam("UUID"));
                 int lives = Integer.parseInt(redisMessage.getParam("LIVES"));
                 boolean deathban = Boolean.parseBoolean(redisMessage.getParam("DEATHBAN"));
+
+                Profile.get(uuid).setEntry(new Entry(uuid, lives, deathban));
             }
             break;
             case VAPOR: {
                 UUID uuid = UUID.fromString(redisMessage.getParam("UUID"));
-
+                Vapor.hook(uuid);
             }
             break;
             default: {

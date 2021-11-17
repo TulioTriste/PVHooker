@@ -13,13 +13,13 @@ public class Redis {
 
     RedisListener redisListener;
 
-    private final String ip = PVHooker.get().getConfig().getString("REDIS.HOST");
+    private final String ip = PVHooker.get().getFileConfig().getString("REDIS.HOST");
 
-    private final int port = PVHooker.get().getConfig().getInt("REDIS.PORT");
+    private final int port = PVHooker.get().getFileConfig().getInt("REDIS.PORT");
 
-    private final String password = PVHooker.get().getConfig().getString("REDIS.AUTHENTICATION.PASSWORD");
+    private final String password = PVHooker.get().getFileConfig().getString("REDIS.AUTHENTICATION.PASSWORD");
 
-    private final boolean auth = PVHooker.get().getConfig().getBoolean("REDIS.AUTHENTICATION.ENABLED");
+    private final boolean auth = PVHooker.get().getFileConfig().getBoolean("REDIS.AUTHENTICATION.ENABLED");
 
     @Getter private boolean active = false;
 

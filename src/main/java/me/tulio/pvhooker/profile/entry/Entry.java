@@ -10,7 +10,6 @@ import java.util.UUID;
 public class Entry {
 
     private final UUID identifier;
-    private final String name;
     private final int lives;
     private final boolean deathban;
 }
