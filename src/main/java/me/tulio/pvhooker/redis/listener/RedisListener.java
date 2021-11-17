@@ -19,7 +19,7 @@ public class RedisListener extends JedisPubSub {
          */
         switch (redisMessage.getPayload()) {
             case PANDAHUB: {
-                String name = redisMessage.getParam("NAME");
+                UUID uuid = UUID.fromString(redisMessage.getParam("UUID"));
                 int lives = Integer.parseInt(redisMessage.getParam("LIVES"));
                 boolean deathban = Boolean.parseBoolean(redisMessage.getParam("DEATHBAN"));
             }

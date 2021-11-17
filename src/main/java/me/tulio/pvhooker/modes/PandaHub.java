@@ -1,6 +1,4 @@
-package me.tulio.pvhooker.modes.impl;
-
-import me.tulio.pvhooker.modes.Modes;
+package me.tulio.pvhooker.modes;
 
 public class PandaHub implements Modes {
     @Override
